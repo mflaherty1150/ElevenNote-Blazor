@@ -39,6 +39,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        categories = await http.GetFromJsonAsync<List<CategoryListItem>>("Category");
+        categories = await http.GetFromJsonAsync<List<CategoryListItem>>("/api/Category");
     }
 }

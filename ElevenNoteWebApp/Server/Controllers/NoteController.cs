@@ -75,7 +75,7 @@ namespace ElevenNoteWebApp.Server.Controllers
 
             if (note == null) return NotFound();
 
-            bool wasSuccessful = await = _noteService.DeleteNoteAsync(id);
+            bool wasSuccessful = await _noteService.DeleteNoteAsync(id);
 
             if (!wasSuccessful) return BadRequest();
 
