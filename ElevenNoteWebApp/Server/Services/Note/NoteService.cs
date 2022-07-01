@@ -42,13 +42,6 @@ namespace ElevenNoteWebApp.Server.Services.Note
             return await _context.SaveChangesAsync() == 1;
         }
 
-
-        // Why is this here?
-        public Task<bool> DeleteNoteAsync(string userId)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<IEnumerable<NoteListItem>> GetAllNotesAsync()
         {
             var noteQuery = _context
@@ -106,5 +99,10 @@ namespace ElevenNoteWebApp.Server.Services.Note
         }
 
         public void SetUserId(string userId) => _userId = userId;
+
+        public Task<bool> DeleteNoteAsync(string userId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

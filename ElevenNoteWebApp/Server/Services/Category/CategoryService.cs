@@ -13,6 +13,7 @@ namespace ElevenNoteWebApp.Server.Services.Category
         {
             _context = context;
         }
+
         public async Task<bool> CreateCategoryAsync(CategoryCreate model)
         {
             if (model == null) return false;

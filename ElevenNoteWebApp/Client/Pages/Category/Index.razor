@@ -1,4 +1,5 @@
-﻿@page "/Category/Index"
+﻿@page "/Category"
+@page "/Category/Index"
 
 @using ElevenNoteWebApp.Shared.Models.Category
 @using Microsoft.AspNetCore.Authorization
@@ -15,25 +16,25 @@
 }
 else
 {
-    
-}
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (CategoryListItem category in categories)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>@category.Id</td>
-                <td>@category.Name</td>
+                <th>Id</th>
+                <th>Name</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (CategoryListItem category in categories)
+            {
+                <tr>
+                    <td>@category.Id</td>
+                    <td>@category.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
 @code {
     private List<CategoryListItem> categories;
 
